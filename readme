@@ -1,0 +1,62 @@
+# APPLE_2024 Project
+
+This project contains 3 Jupyter Notebook programs: `Gnews.ipynb`, `Experience.ipynb`, and `Trading.ipynb`, along with related data files and trading charts.
+
+## File Descriptions
+
+### Data Files
+- **APPLE.json**: Contains historical news data used for experience learning.
+- **APPLE_Trading.json**: Contains news data used for the live trading phase.
+- **APPLE_EXP.json**: Stores the trading experience learned from the historical news data in a standardized format.
+- **APPLE.xlsx**: Contains historical stock price data of Apple Inc.
+
+### Code Files
+- **Gnews.ipynb**:
+  - Downloads news related to Apple Inc. from the Gnews API.
+  - The news data is saved into two files:
+    - `APPLE.json`: Stores news data for the experience learning phase.
+    - `APPLE_Trading.json`: Stores news data for the live trading phase.
+
+- **Experience.ipynb**:
+  - Learns trading experience from the historical news data in `APPLE.json`.
+  - Explains the reasons for stock price movements based on the news of the day and saves the results in `APPLE_EXP.json`.
+
+- **Trading.ipynb**:
+  - Simulates human-like trading behavior based on news and experience data.
+  - Uses both the news dataset (`APPLE.json`) and the experience dataset (`APPLE_EXP.json`) to simulate 3 trading models: **Radical** , **Conservative**, and **Normal**.
+  - The trading records for each model are saved as:
+    - `responses_by_date_conservative.txt`: Trading records for the conservative model.
+    - `responses_by_date_normal.txt`: Trading records for the normal model.
+    - `responses_by_date_radical.txt`: Trading records for the radical model.
+  - The corresponding trading charts are saved as:
+    - `stock_actions_conservative.png`: Trading chart for the conservative model.
+    - `stock_actions_normal.png`: Trading chart for the normal model.
+    - `stock_actions_radical.png`: Trading chart for the radical model.
+
+## How to Run the Project
+
+1. **Download News Data**(The news had been collected):
+   - Run `Gnews.ipynb` to download news related to Apple Inc. from the Gnews API.
+   - The news data will be saved in `APPLE.json` (for experience learning) and `APPLE_Trading.json` (for live trading).
+
+2. **Learn Trading Experience**:
+   - Run `Experience.ipynb` to learn trading experience from the historical news data in `APPLE.json`.
+   - The results will be saved in `APPLE_EXP.json` for use in the trading simulation.
+
+3. **Simulate Trading**:
+   - Run `Trading.ipynb` to simulate trading behavior using both the historical news data (`APPLE.json`) and the experience data (`APPLE_EXP.json`).
+   - Choose between different trading models (Conservative, Normal, Radical) and generate the respective trading records and charts.
+
+## Trading Models and Results
+
+- **Conservative**:
+  - Trading records: `responses_by_date_conservative.txt`
+  - Chart: `stock_actions_conservative.png`
+
+- **Normal**:
+  - Trading records: `responses_by_date_normal.txt`
+  - Chart: `stock_actions_normal.png`
+
+- **Radical**:
+  - Trading records: `responses_by_date_radical.txt`
+  - Chart: `stock_actions_radical.png`
